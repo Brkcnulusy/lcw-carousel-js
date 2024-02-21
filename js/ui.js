@@ -28,17 +28,3 @@ export const renderSlider = function (datas, element) {
         `;
   });
 };
-
-export const emptyHeart = function (element) {
-    element.src = "./assets/images/empty-heart.svg"
-}
-export const fullHeart = function (element) {
-    element.src = "./assets/images/full-heart.svg"
-}
-
-export const revomeClass = function (element) {
-    element.classList.remove('active');
-}
-export const addClass = function (element) {
-    element.classList.add('active');
-}
