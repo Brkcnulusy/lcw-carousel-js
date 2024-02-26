@@ -52,13 +52,22 @@ html {
 }
 .container .slider {
   width: calc(100% - 150px);
-  height: 550px;
+  height: 600px;
   padding: 30px;
   overflow: hidden;
 }
+@media (max-width: 740px) {
+  .container .slider {
+    width: calc(100% - 80px);
+  }
+}
+@media (max-width: 500px) {
+  .container .slider {
+    width: calc(100% - 60px);
+  }
+}
 .container .slider .slider-items {
-  width: -moz-max-content;
-  width: max-content;
+  width: 2880px;
   height: 100%;
   display: flex;
   justify-content: center;

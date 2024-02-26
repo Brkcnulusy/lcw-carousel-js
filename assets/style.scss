@@ -57,12 +57,20 @@ html {
 
   .slider {
     width: calc(100% - 150px);
-    height: 550px;
+    height: 600px;
     padding: 30px;
     overflow: hidden;
+    @media (max-width: 740px) {
+      width: calc(100% - 80px);
+      
+    }
+    @media (max-width: 500px) {
+      width: calc(100% - 60px);
+      
+    }
 
     .slider-items {
-      width: max-content;
+      width: 2880px;
       height: 100%;
       display: flex;
       justify-content: center;
@@ -72,6 +80,7 @@ html {
       transition: transform 0.5s ease;
       overflow: hidden;
       position: relative;
+      
 
       .slider-item {
         width: 270px;

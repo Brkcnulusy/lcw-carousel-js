@@ -8,11 +8,12 @@ const carousel = (function () {
   const slider = document.querySelector(".js-slider");
   const nextButton = document.querySelector(".js-next");
   const prevButton = document.querySelector(".js-prev");
+  const windowWidth = window.screen.width;
   let startIndex = 0;
   const sliderOptions = {
-    visibleItemCount: 6,
+    visibleItemCount: '',
     totalItemCount: 10,
-    slideWidth: 290,
+    slideWidth: 288,
   };
 
   // EventListeners
@@ -25,6 +26,24 @@ const carousel = (function () {
     });
   };
   // FunC
+
+  function _getItemsPerPage() {
+    if (windowWidth >= 1890) {
+      return 6;
+    } else if (windowWidth >= 1620) {
+      return 5;
+    } else if (windowWidth >= 1350) {
+      return 4;
+    } else if (windowWidth >= 1050) {
+      return 3;
+    } else if (windowWidth >= 670) {
+      return 2;
+    } else if (windowWidth >= 500) {
+      return 1;
+    } else {
+      return 0;
+    }
+  }
 
   //   const updateSlider = function () {
   //     // for (let i = 0; i < sliderOptions.totalItemCount; i++) {
@@ -46,10 +65,7 @@ const carousel = (function () {
   };
 
   const _nextItem = function () {
-    if (
-      startIndex <
-      sliderOptions.totalItemCount - sliderOptions.visibleItemCount
-    ) {
+    if (startIndex < sliderOptions.totalItemCount - sliderOptions.visibleItemCount) {
       startIndex++;
       slider.style.transform = `translateX(-${startIndex * sliderOptions.slideWidth }px)`;
     }
@@ -94,6 +110,7 @@ const carousel = (function () {
     init: function () {
       _getProduct();
       eventListeners();
+      sliderOptions.visibleItemCount = _getItemsPerPage();
     },
   };
 })();
