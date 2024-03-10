@@ -36,4 +36,4 @@ Projede kullandığımız resimler ise assets için images klasöründe tutulmak
 
 
 # Project Link
-[LCW Carousel](https://brkcnulusy.github.io/lcw-carousel-js/)
+[LCW Carousel](https://lcw-carousel-77in8cct8-burak-can-s-projects.vercel.app/)
