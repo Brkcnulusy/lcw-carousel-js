@@ -3,8 +3,7 @@ import { get } from "./request.js";
 
 const carousel = (function () {
   // Variables
-  const BASE_URL =
-    "https://gist.githubusercontent.com/sevindi/5765c5812bbc8238a38b3cf52f233651/raw/56261d81af8561bf0a7cf692fe572f9e1e91f372/products.json";
+  const BASE_URL = "http://localhost:3000/products";
   const slider = document.querySelector(".js-slider");
   const nextButton = document.querySelector(".js-next");
   const prevButton = document.querySelector(".js-prev");
